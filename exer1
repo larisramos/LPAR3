@@ -1,0 +1,31 @@
+#!/bin/bash
+# AUTOR: LARISSA RAMOS
+# O script resultará nas saídas do usuario logado, diretorio corrente, e manual do comando ls.
+
+echo "Digite o número para a opção desejada:"
+echo
+echo "1 - USUARIO LOGADO"
+echo "2 - DIRETORIO CORRENTE"
+echo "3 - MANUAL DO COMANDO LS"
+echo 
+
+read x
+
+case "$x" in
+	1) 
+		echo "Usuario logado:"
+		whoami
+		echo ;; 
+	2)
+		echo "Diretorio corrente:"
+		pwd
+		echo ;;
+	3)
+		echo "Manual do comando ls:"
+		man ls
+		echo ;;
+	*)
+		echo "Você digitou um número invalido!" ;;
+	esac
+
+
