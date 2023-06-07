@@ -1,0 +1,13 @@
+#!/bin/bash
+#Autor: Larissa Ramos
+# Este script é uma modificação do exemplo mencionado em aula. A modificação receberá uma variável e verificara se é maior ou menor que 100.
+#!/bin/bash
+echo "Digite o número a ser validado: "
+read TESTE
+if [ $TESTE -gt 100 ]; then
+    echo "É maior que 100"
+elif [ $TESTE -lt 100 ]; then
+    echo "É menor que 100"
+else
+    echo "É igual a 100"
+fi
