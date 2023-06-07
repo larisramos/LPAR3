@@ -1,0 +1,20 @@
+#!/bin/bash
+#Autor: Larissa Ramos
+#O script limpa a tela, mostra o diretório atual e mostra arquivos ocultos.
+
+echo "Digite o número para a opção desejada:"
+echo "1 - Limpar a tela."
+echo "2 - Mostrar o diretório atual"
+echo "3 - Mostras arquivos ocultos"
+echo
+
+read x
+case "$x" in
+	1) clear ;;
+	2) echo "Diretório atual" 
+	   pwd
+	   echo ;;
+	3) echo "ARQUIVOS OCULTOS:" 
+	   ls -a ;;
+	*) echo "Opção inválida" ;;
+	esac
