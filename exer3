@@ -1,0 +1,11 @@
+#!/bin/bash
+#AUTOR: Larissa Ramos
+#O script mostra o nome da máquina e suas configurações de rede.
+
+echo "NOME DA MÁQUINA:"
+hostname
+echo
+
+echo "CONFIGURAÇÕES DE REDE:"
+ip a
+echo
