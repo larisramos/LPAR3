@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#Autor: Larissa Ramos
+
+# Scritp que mostra os parametros com o uso do comando shift
+#SCRIPT EM CONSTRUÇÃO = NÃO RODOU NO REPLIT, TESTAR NA VM DA FATEC
+
+contador=1
+
+while [ $# -gt 0 ] ; do
+    echo "Parâmetro $contador: $1"
+    shift
+    contador=$((contador + 1))
+done

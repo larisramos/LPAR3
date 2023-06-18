@@ -1,0 +1,52 @@
+#!/bin/bash
+
+#Autor: Larissa Ramos
+
+#Faça um script que limpe a tela e mostre os número de 1 a 100 na tela do computador.
+
+#Faça um script que limpe a tela e mostre os números de 100 a 1 na tela do computador.
+
+#Faça um script que leia 3 números e informe a média dos números.
+
+
+echo "Digite o número da opção desejada:"
+echo "1 - Mostrar números de 1 a 100"
+echo "2 - Mostrar números de 100 a 1"
+echo "3 - Calcular a média de 3 números"
+echo "4 - Sair"
+
+
+read X
+
+case "$X" in
+    1)
+        clear
+        for ((i=1; i<=100; i++)); do
+            echo "$i"
+        done
+        ;;
+    2)
+        clear
+        for ((i=100; i>=1; i--)); do
+            echo "$i"
+        done
+        ;;
+    3)
+        clear
+        echo "Digite o 1° numero:"
+        read num1
+        echo "Digite o 2° numero:"
+        read num2
+        echo "Digite o 3° numero:"
+        read num3
+        media=$((($num1 + $num2 + $num3) / 3))
+        echo "A média dos números é: $media"
+        ;;
+    4)
+        clear
+        exit
+        ;;
+    *)
+        echo "Opção inválida. Digite um número de 1 a 4."
+        ;;
+esac

@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# Autor: Larissa Ramos
+# Crie um script que exiba um menu e conforme a opção selecionada limpe a tela e execute os seguintes comandos
+
+echo "Digite o número da opção desejada:"
+echo
+echo "1 - Listar arquivos (ls)"
+echo "2 - Listar processos (ps -f)"
+echo "3 - Usuários logados (who)"
+echo "4 - Sair"
+echo
+
+read X
+
+case "$X" in
+    1)
+        clear
+        ls
+        ;;
+    2)
+        clear
+        ps -f
+        ;;
+    3)
+        clear
+        who
+        ;;
+    4)
+        clear
+        exit
+        ;;
+    *)
+        echo "Opção inválida. Digite um número de 1 a 4."
+        ;;
+esac

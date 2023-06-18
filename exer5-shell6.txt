@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#Autor: Larissa Ramos
+# O script pedirá um nome para criação do diretorio e verificara se esse nome está disponivel, caso esteja disponivel ele criara um diretorio.
+
+echo "Digite o nome do diretório a ser criado:"
+read nomeDiretorio
+
+if [ -d "$nomeDiretorio" ] ;
+then
+    echo "O diretório $nomeDiretorio já existe."
+else
+    mkdir "$nomeDiretorio"
+    echo "O diretório $nomeDiretorio foi criado com sucesso."
+fi

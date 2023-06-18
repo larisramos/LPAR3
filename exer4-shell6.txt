@@ -1,0 +1,19 @@
+#!/bin/bash
+# Autor: Larissa Ramos
+# O script recebe dois números como parâmetro e mostra a relação entre eles.
+
+echo "Digite o primeiro número:"
+read valor1
+
+echo "Digite o segundo número:"
+read valor2
+
+if [ "$valor1" -gt "$valor2" ]; 
+then
+    echo "$valor1 é maior que $valor2"
+elif [ "$valor1" -lt "$valor2" ]; 
+then
+    echo "$valor1 é menor que $valor2"
+else
+    echo "$valor1 é igual a $valor2"
+fi

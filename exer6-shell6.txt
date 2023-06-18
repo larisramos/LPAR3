@@ -1,0 +1,34 @@
+#!/bin/bash
+
+# Autor: Larissa Ramos
+# O script será uma calculadora basica.
+# Nota pessoal: o BEGIN junto com o awk é usado para imprimir e formatar o resultado. - DESCONSIDERAR ESSA PARTE 
+
+echo "Digite o primeiro número:"
+read num1
+
+echo "Digite a operação (+, -, *, /):"
+read operacao
+
+echo "Digite o segundo número:"
+read num2
+
+case "$operacao" in
+    "+")
+        resultado=$((num1 + num2))
+        ;;
+    "-")
+        resultado=$((num1 - num2))
+        ;;
+    "*")
+        resultado=$((num1 * num2))
+        ;;
+    "/")
+        resultado=$(awk "BEGIN {printf \"%.2f\", $num1 / $num2}")
+        ;;
+    *)
+        echo "Operação inválida. Por favor, digite uma operação válida: +, -, *, /"
+        ;;
+esac
+
+echo "O resultado da operação é: $resultado"

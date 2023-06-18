@@ -1,0 +1,22 @@
+#!/bin/bash
+#Autor: Larissa Ramos
+# O script pede um numero e responde qual mes é.
+
+echo "Digite o numero do mês desejado:"
+read numero_mes
+
+case $numero_mes in
+    1) echo "Você digitou o mês de Janeiro" ;;
+    2) echo "Você digitou o mês de Fevereiro" ;;
+    3) echo "Você digitou o mês de Março" ;;
+    4) echo "Você digitou o mês de Abril" ;;
+    5) echo "Você digitou o mês de Maio" ;;
+    6) echo "Você digitou o mês de Junho" ;;
+    7) echo "Você digitou o mês de Julho" ;;
+    8) echo "Você digitou o mês de Agosto" ;;
+    9) echo "Você digitou o mês de Setembro" ;;
+    10) echo "Você digitou o mês de Outubro" ;;
+    11) echo "Você digitou o mês de Novembro" ;;
+    12) echo "Você digitou o mês de Dezembro" ;;
+    *) echo "Você caracter um número invalido" ;;
+esac
